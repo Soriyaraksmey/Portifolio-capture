@@ -5,6 +5,7 @@ import { Globlestyle } from './Components/GlobleStyle';
 import Nav from "./Components/Nav";
 import OurWork from './pages/OurWorks';
 import ContactUs from './pages/ContactUs';
+import MovieDetails from './pages/MovieDetails';
 
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
       <Nav />
       <Switch>
         <Route exact path="/" component={AboutUs} />
-        <Route exact path="/Ourwork" component={OurWork} />
+        <Route exact path="/work" component={OurWork} />
+        <Route path="/work/:id" component={MovieDetails} />
         <Route exact path="/Contactus" component={ContactUs} />
       </Switch>
     </div>

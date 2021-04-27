@@ -3,6 +3,9 @@ import { useHistory } from 'react-router-dom'
 import styled from 'styled-components';
 import { MovieState } from '../movieState';
 import Arward from './arward';
+//Animation
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../Animations';
 
 const MovieDetails = () => {
 
@@ -20,7 +23,7 @@ const MovieDetails = () => {
     return (
         <>{
             movie && (
-                <Details>
+                <Details variants={pageAnimation} initial="hidden" animate="show" exit="exit">
                     <HeadLine>
                         <h2>{movie.title}</h2>
                         <img src={movie.mainImg} alt="movie" />
@@ -39,7 +42,7 @@ const MovieDetails = () => {
     );
 }
 
-const Details = styled.div`
+const Details = styled(motion.div)`
 color: white;
 `;
 const HeadLine = styled.div`

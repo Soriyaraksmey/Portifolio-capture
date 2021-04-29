@@ -1,43 +1,46 @@
 import React from 'react'
 import styled from 'styled-components'
 import { About } from '../styles'
+import Toggle from './Toggle';
+import { AnimateSharedLayout } from 'framer-motion';
+import ScrollAnimation from "./ScrollAnimation";
+import { fade } from "../Animations";
 
 const FaqSection = () => {
+
+    const [elements, controls] = ScrollAnimation();
+
     return (
-        <Faq>
+        <Faq variants={fade} animate={controls} initial="hidden" ref={elements}>
             <h2>Any questions <span>FAQ</span></h2>
-            <div className="question">
-                <h4>How Do I start?</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor, sit amet</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima temporibus et, </p>
-                </div>
-                <div className="faq-line"></div>
-            </div>
-            <div className="question">
-                <h4>Daily Sachdual</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor, sit amet</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima temporibus et, </p>
-                </div>
-                <div className="faq-line"></div>
-            </div>
-            <div className="question">
-                <h4>Payments Method</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor, sit amet</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima temporibus et, </p>
-                </div>
-                <div className="faq-line"></div>
-            </div>
-            <div className="question">
-                <h4>How can i contact u?</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor, sit amet</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima temporibus et, </p>
-                </div>
-                <div className="faq-line"></div>
-            </div>
+            <AnimateSharedLayout>
+                <Toggle title={"How Do I start?"}>
+
+                    <div className="answer">
+                        <p>Lorem ipsum dolor, sit amet</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima temporibus et, </p>
+                    </div>
+                </Toggle>
+                <Toggle title={"Daily Sachdual"}>
+
+                    <div className="answer">
+                        <p>Lorem ipsum dolor, sit amet</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima temporibus et, </p>
+                    </div>
+                </Toggle>
+                <Toggle title={"Payments Method"}>
+                    <div className="answer">
+                        <p>Lorem ipsum dolor, sit amet</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima temporibus et, </p>
+                    </div>
+                </Toggle>
+                <Toggle title={"How can I contact you?"}>
+                    <div className="answer">
+                        <p>Lorem ipsum dolor, sit amet</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima temporibus et, </p>
+                    </div>
+                </Toggle>
+            </AnimateSharedLayout>
         </Faq>
     );
 }

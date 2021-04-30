@@ -53,13 +53,10 @@ span{
 a{
     font-size: 1.1.rem;
 }
-html{
+/* html{
     @media (max-width: 1500px){
         font-size: 80%;
     }
-    @media (max-width: 1300px){
-        opacity: 0;
-    }
-}
+} */
 
 `;

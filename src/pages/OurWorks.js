@@ -61,6 +61,12 @@ padding: 5rem 10rem;
 h2{
     padding: 1rem 0rem;
 }
+@media (max-width: 1024px){
+    padding: 5rem 1rem;
+    h2{
+        font-size: 2.5rem;
+    }
+}
 `;
 const Movie = styled(motion.div)`
 padding-bottom: 10rem;
@@ -73,6 +79,9 @@ img{
     width: 100%;
     height: 70vh;
     object-fit: cover;
+}
+@media (max-width: 1024px){
+    padding-bottom: 5rem;
 }
 `;
 const Hidden = styled.div` 

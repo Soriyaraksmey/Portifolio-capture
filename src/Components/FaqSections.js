@@ -70,6 +70,14 @@ h2{
 p{
     padding: 1rem 0rem;
 }
+@media (max-width: 1024px) {
+h4{
+    font-size: 1.5rem;
+}
+
+}
+
+
 `;
 
 export default FaqSection;

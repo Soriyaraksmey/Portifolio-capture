@@ -63,12 +63,17 @@ const Services = styled(About)`
         width: 70%;
         padding: 2rem 0rem 4rem 0rem;
     }
-
+    @media (max-width: 1024px) {
+    display: block;
+  }
 `;
 
 const Cards = styled.div`
 display: flex;
 flex-wrap: wrap;
+@media (max-width: 1024px) {
+    justify-content: center;
+  }
 `;
 const Card = styled.div`
 flex-basis: 15rem;

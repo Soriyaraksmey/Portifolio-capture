@@ -11,7 +11,6 @@ import Wave from '../Wave';
 const AboutSection = () => {
     return (
         <About>
-
             <Description>
                 <div className="title">
                     <Hide>

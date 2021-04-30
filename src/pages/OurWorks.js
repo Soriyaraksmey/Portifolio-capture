@@ -10,6 +10,7 @@ import ScrollAnimation from "../Components/ScrollAnimation";
 import { motion } from 'framer-motion';
 import { pageAnimation, Slider, fade, ImgAnim, LineAnim, sliderContainer, swipe, swipe2 } from '../Animations';
 import { Hide } from '../styles';
+import ScrollTop from '../Components/ScrollTop';
 
 
 const OurWork = () => {
@@ -49,6 +50,7 @@ const OurWork = () => {
                 <img src={goodtimes} alt="goodtimes" />
             </Link>
         </Movie>
+        <ScrollTop />
     </Work>);
 }
 
